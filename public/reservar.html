@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Veículo - RoyalDrive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 onclick="window.location.href='/'" style="cursor: pointer;">👑 RoyalDrive</h1>
+        <div id="user-area">
+            </div>
+    </header>
+
+    <div class="container">
+        <h1>Finalizar a sua Reserva</h1>
+        
+        <div class="reserva-grid">
+            
+            <div id="info-carro">
+                <p style="color:#aaa;">A carregar informações do veículo...</p>
+            </div>
+
+            <div id="form-reserva">
+                <h3>Escolha as Datas</h3>
+                
+                <label for="data-inicio">Data de Levantamento:</label>
+                <input type="date" id="data-inicio">
+
+                <label for="data-fim">Data de Devolução:</label>
+                <input type="date" id="data-fim">
+
+                <div id="valor-total">Total: 0.00 €</div>
+
+                <button id="btn-pagar" class="btn" style="width: 100%; font-size: 1.1rem; padding: 15px;">
+                    AVANÇAR PARA PAGAMENTO ➔
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script> <script src="reservar.js"></script>
+</body>
+</html>
