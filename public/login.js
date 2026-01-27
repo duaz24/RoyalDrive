@@ -29,13 +29,11 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
             // 2. Redirecionar para a página correta
             // Se for Admin, vai para o painel de Admin
-            if (dados.user.role === 'Admin') {
-                window.location.href = 'admin.html';
-            } else {
-                // Se for Cliente, vai direto para a Frota (Carros)
-                // Já não vai para index.html porque esse agora é a capa!
-                window.location.href = 'frota.html';
-            }
+         if (dados.user.role === 'Administrador') {
+    window.location.href = 'admin.html';
+} else {
+    window.location.href = 'frota.html';
+}
 
         } else {
             // Mostrar erro (ex: senha errada)
