@@ -100,3 +100,10 @@ document.getElementById('btn-pagar').addEventListener('click', () => {
     // Vai para a página de Checkout levando os dados na URL
     window.location.href = `checkout.html?${params.toString()}`;
 });
+const hoje = new Date().toISOString().split('T')[0];
+document.getElementById('data-inicio').setAttribute('min', hoje);
+
+// Quando mudar a data de início, a data de fim tem de ser no mínimo o dia seguinte
+document.getElementById('data-inicio').addEventListener('change', (e) => {
+    document.getElementById('data-fime').setAttribute('min', e.target.value);
+});
